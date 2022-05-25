@@ -12,10 +12,11 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: lightblue;
 }
 
 /* style for body with start button, question, and answer options */
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(138, 138, 159);
 }

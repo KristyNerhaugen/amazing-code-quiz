@@ -78,7 +78,7 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("timer").innerHTMLS = days + "d " + hours + "h " + minutes + "m " + seconds "s ";
+    document.getElementById("timer").innerHTMLS = ('days + "d " + hours + "h " + minutes + "m " + seconds "s "');
 
     if (distance < 0) {
         clearInterval(x);
