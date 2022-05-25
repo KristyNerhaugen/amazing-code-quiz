@@ -1,30 +1,72 @@
-// var to start quiz
+// define vars for buttons
 var startEl = document.querySelector("#start-button");
+var answerEl = document.querySelector("answer");
+var highScoreEl = document.querySelector("#high-scores");
 
-// arrays of objects for each question
+// array to list each question as an object
 function generateQuestions() {
     // string for questions and answers
 
     var questionList = [
         {
-            question: "Question one: what is the answer?", "Question two: what is the answer?", "Question three: what is the answer?", "Question four: what is the answer?",
-            choices: ["Yes", "No", "Maybe", "I don't know."], ["2Yes", "2No", "2Maybe", "2I don't know."],["3Yes", "3No", "3Maybe", "3I don't know."],["4Yes", "4No", "4Maybe", "4I don't know."],
-            // set answer to wherever the correct answer is in the string
-            answer: 3, 2, 3, 1
-        }
-        
+            numb: 1,
+            question: "Question one: what is the answer?", 
+            choices: [
+                "Yes", 
+                "No", 
+                "Maybe", 
+                "I don't know."],
+            // set answer to number in the choices string that corresponds with correct answer
+                answer: 3
+        },
+        {
+            numb: 2,
+            question: "Question two: what is the answer?", 
+            choices: [
+                "2Yes", 
+                "2No", 
+                "2Maybe", 
+                "2I don't know."],
+            // set answer to number in the choices string that corresponds with correct answer
+            answer: 2
+        },
+        {
+            numb: 3,
+            question: "Question three: what is the answer?", 
+            choices: [
+                "3Yes", 
+                "3No", 
+                "3Maybe", 
+                "3I don't know."],
+            // set answer to number in the choices string that corresponds with correct answer
+            answer: 4
+        },
+        {
+            numb: 4,
+            question: "Question four: what is the answer?", 
+            choices: [
+                "4Yes", 
+                "4No", 
+                "4Maybe", 
+                "4I don't know."],
+            // set answer to number in the choices string that corresponds with correct answer
+            answer: 2
+        }, 
     ]
 }
 
-// Click to start quiz
+// Click to start quiz and display first question
 function startQuiz() {
     renderQuestions()
 
 }
-// function to start the quiz and timer
 
-// tell user if answer is correct or wrong, if wrong subtract time
+// loop (?) to display question 2, 3, and then 4
 
-// allow for input of initials with score
+// function to start timer when quiz starts 
+
+// tell user if answer is correct or wroing, time penalties when questions are answered wrong/false
+
+// at end of quiz allow for input of initials with score
 
 // store high scores
