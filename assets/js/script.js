@@ -62,7 +62,7 @@ questionTitleEl.innerHTML = questionList[index].question
 function generateQuestions() {
 
     // trying to hide start button using https://javascript.plainenglish.io/how-to-apply-css-styles-to-page-elements-using-javascript-e6d4a22a40de and https://careerkarma.com/blog/css-hide-element/ for guidance
-    // this worked on the second click:
+    // this works on the second click, and needs to work on the first click:
     // startEl.addEventListener('click', () => {
     //     startEl.style.display = 'none';
     // });
@@ -87,7 +87,9 @@ function generateQuestions() {
 // }
 
 startEl.addEventListener('click', generateQuestions)
-
+startEl.addEventListener('click', () => {
+    startEl.style.display = 'none';
+});
 
 // Click to start quiz and display first question
 // function startQuiz() {
