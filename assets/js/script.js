@@ -61,12 +61,6 @@ questionTitleEl.innerHTML = questionList[index].question
 // array to list each question as an object
 function generateQuestions() {
 
-    // trying to hide start button using https://javascript.plainenglish.io/how-to-apply-css-styles-to-page-elements-using-javascript-e6d4a22a40de and https://careerkarma.com/blog/css-hide-element/ for guidance
-    // this works on the second click, and needs to work on the first click:
-    // startEl.addEventListener('click', () => {
-    //     startEl.style.display = 'none';
-    // });
-
     // string for questions and answers
     if (index < 4){
         renderQuestion();
@@ -76,34 +70,23 @@ function generateQuestions() {
     console.log("Alert!");
     }
     
-    // for (var i = 0; i < questionList.Length; i++) {
-        
+    // for (var i = 0; i < questionList.Length; i++) {     
         
     // }
 
 }
-// when clicking start button, hide the start button so quiz can begin 
 
-// }
-
+// Click to start quiz and display first question
 startEl.addEventListener('click', generateQuestions)
+// click to have start quiz button hide 
 startEl.addEventListener('click', () => {
     startEl.style.display = 'none';
 });
 
-// Click to start quiz and display first question
-// function startQuiz() {
-//     renderQuestions()
-
-// }
-
-// loop (?) to display question 2, 3, and then 4
-
 // function to start timer when quiz starts 
-
-// code for countdown timer created using https://www.w3schools.com/howto/howto_js_countdown.asp as a guide
-
-var now = 600;
+// moved the time into the event listener to get the timer to start only when the start quiz button begins
+startEl.addEventListener('click', () => {
+  var now = 600;
 
 var x = setInterval(function() {
 
@@ -114,6 +97,9 @@ var x = setInterval(function() {
         clearInterval(x);
     }
 }, 1000);
+});
+
+// loop (?) to display question 2, 3, and then 4
 
 // tell user if answer is correct or wrong, time penalties when questions are answered wrong/false
 
