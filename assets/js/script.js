@@ -60,6 +60,12 @@ questionTitleEl.innerHTML = questionList[index].question
 
 // array to list each question as an object
 function generateQuestions() {
+
+    // trying to hide start button using https://javascript.plainenglish.io/how-to-apply-css-styles-to-page-elements-using-javascript-e6d4a22a40de and https://careerkarma.com/blog/css-hide-element/ for guidance
+//     for (div of document.getElementsByTagName("#start-button")) {
+//        div.style.display = "none";
+//    }
+
     // string for questions and answers
     if (index < 4){
         renderQuestion();
@@ -75,8 +81,13 @@ function generateQuestions() {
     // }
 
 }
+// when clicking start button, hide the start button so quiz can begin 
+
+// }
 
 startEl.addEventListener('click', generateQuestions)
+
+
 // Click to start quiz and display first question
 // function startQuiz() {
 //     renderQuestions()
