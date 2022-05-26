@@ -62,9 +62,10 @@ questionTitleEl.innerHTML = questionList[index].question
 function generateQuestions() {
 
     // trying to hide start button using https://javascript.plainenglish.io/how-to-apply-css-styles-to-page-elements-using-javascript-e6d4a22a40de and https://careerkarma.com/blog/css-hide-element/ for guidance
-//     for (div of document.getElementsByTagName("#start-button")) {
-//        div.style.display = "none";
-//    }
+    // this worked on the second click:
+    // startEl.addEventListener('click', () => {
+    //     startEl.style.display = 'none';
+    // });
 
     // string for questions and answers
     if (index < 4){
