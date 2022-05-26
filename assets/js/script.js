@@ -58,9 +58,6 @@ function renderQuestion() {
 questionTitleEl.innerHTML = questionList[index].question
 }
 
-// for ( index < array.length; index++) {
-    
-// }
 // array to list each question as an object
 function generateQuestions() {
     // string for questions and answers
@@ -71,6 +68,11 @@ function generateQuestions() {
     else {
     console.log("Alert!");
     }
+    
+    // for (var i = 0; i < questionList.Length; i++) {
+        
+        
+    // }
 
 }
 
@@ -92,14 +94,14 @@ var now = 600;
 var x = setInterval(function() {
 
     CountDownTimer.innerHTML = now;
-// now will change and go down by one--- use index -- ??? (what is the opposite of index ++?)
+// now will change and go down by one
     now--;
     if (now < 0) {
         clearInterval(x);
     }
 }, 1000);
 
-// tell user if answer is correct or wroing, time penalties when questions are answered wrong/false
+// tell user if answer is correct or wrong, time penalties when questions are answered wrong/false
 
 // at end of quiz allow for input of initials with score
 

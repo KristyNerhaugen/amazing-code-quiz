@@ -12,11 +12,24 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: lightblue;
+    background-color: rgb(141, 142, 195)
 }
 
 /* style for body with start button, question, and answer options */
 
 body {
-    background-color: rgb(138, 138, 159);
+    text-align: center;
+    background-color: rgb(193, 179, 179); 
+}
+
+h3 {
+    font-size: 32px;
+}
+/* style for all buttons */
+button {
+    background-color: gray;
+    color: black;
+    font-size: 30px;
+
+
 }
