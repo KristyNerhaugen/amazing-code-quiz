@@ -37,5 +37,8 @@ button {
 #start-button {
     background-color: darkblue;
     color: white;
-    /* display: none; */
+}
+
+#score-screen {
+    display: none;
 }
