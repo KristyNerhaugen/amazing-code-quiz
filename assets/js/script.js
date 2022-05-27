@@ -10,7 +10,6 @@ let index = 0;
 
 var questionList = [
     {
-        numb: 1,
         question: "1. Commonly used data types do NOT include:",
         answers: [
             "1. strings",
@@ -19,7 +18,6 @@ var questionList = [
             "4. numbers"],
     },
     {
-        numb: 2,
         question: "2. The condition in an if / else statement is enclosed with _____.",
         answers: [
             "1. quotes",
@@ -28,7 +26,6 @@ var questionList = [
             "4. square brackets"],
     },
     {
-        numb: 3,
         question: "3. Arrays in JavaScript can be used to store ______.",
         answers: [
             "1. numbers and strings",
@@ -37,7 +34,6 @@ var questionList = [
             "4. all of the above"], // this is the correct answer
     },
     {
-        numb: 4,
         question: "4. A very useful tool used during development and debugging for printing content to the debugger is:",
         answers: [
             "1. JavaScript",
