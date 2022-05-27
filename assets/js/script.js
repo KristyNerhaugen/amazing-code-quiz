@@ -6,7 +6,7 @@ var CountDownTimer = document.querySelector("#timer");
 var questionTitleEl = document.querySelector("#quiz-question");
 
 // variable declarations
-let index = 0;
+// let index = 0;
 
 var questionList = [
     {
@@ -14,7 +14,7 @@ var questionList = [
         answers: [
             "1. strings",
             "2. booleans",
-            "3. alerts", // this is the correct answer
+            "3. alerts", // 3 is the correct answer
             "4. numbers"],
     },
     {
@@ -22,7 +22,7 @@ var questionList = [
         answers: [
             "1. quotes",
             "2. curly brackets",
-            "3. parenthesis", // this is the correct answer
+            "3. parenthesis", // 3 is the correct answer
             "4. square brackets"],
     },
     {
@@ -31,7 +31,7 @@ var questionList = [
             "1. numbers and strings",
             "2. other arrays",
             "3. booleans",
-            "4. all of the above"], // this is the correct answer
+            "4. all of the above"], // 4 is the correct answer
     },
     {
         question: "4. A very useful tool used during development and debugging for printing content to the debugger is:",
@@ -39,11 +39,12 @@ var questionList = [
             "1. JavaScript",
             "2. terminal/bash",
             "3. for loops",
-            "4. console.log"], // this is the correct answer
+            "4. console.log"], // 4 is the correct answer
     },
 ]
 
 // function to render questions
+let index = questionList.length;
 function renderQuestion() {
     questionTitleEl.innerHTML = questionList[index].question
 }
@@ -52,7 +53,7 @@ function renderQuestion() {
 function generateQuestions() {
     // for loop to cycle through questions 
     questionTitleEl.textContent = questionList[0].question
-    for (var i = 0; i < questionList.length; i++) {
+    for (var i = index; i < questionList.length; i++) {
         var answerOptions = document.createElement("button")
         answerOptions.textContent = questionList.answer;
         answerOptions.setAttribute("value", questionList[i]);
@@ -71,11 +72,17 @@ function generateQuestions() {
 // function to render answer choices
 function renderAnswers() {
     answerEl.innerHTML = questionList[index].answers
-    console.log();
 }
 // function to generate answer choices 
 function generateAnswers() {
-
+    // // for loop to cycle answers 
+    // answerEl.textContent = questionList[0].answers
+    // for (var i = index; i < questionList.length; i++) {
+    //     var answerOptions = document.createElement("button")
+    //     answerOptions.textContent = questionList.answer;
+    //     answerOptions.setAttribute("value", questionList[i]);
+    //     answerEl.appendChild(answerOptions);
+    // }
     if (index < 4) {
         renderAnswers();
     }
