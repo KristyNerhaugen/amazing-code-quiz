@@ -12,42 +12,38 @@ var questionList = [
     {
         numb: 1,
         question: "1. Commonly used data types do NOT include:",
-        choices: [
+        answers: [
             "1. strings",
             "2. booleans",
-            "3. alerts",
+            "3. alerts", // this is the correct answer
             "4. numbers"],
-        answer: 3,
     },
     {
         numb: 2,
         question: "2. The condition in an if / else statement is enclosed with _____.",
-        choices: [
+        answers: [
             "1. quotes",
             "2. curly brackets",
-            "3. parenthesis",
+            "3. parenthesis", // this is the correct answer
             "4. square brackets"],
-        answer: 3,
     },
     {
         numb: 3,
         question: "3. Arrays in JavaScript can be used to store ______.",
-        choices: [
+        answers: [
             "1. numbers and strings",
             "2. other arrays",
             "3. booleans",
-            "4. all of the above"],
-        answer: 4,
+            "4. all of the above"], // this is the correct answer
     },
     {
         numb: 4,
         question: "4. A very useful tool used during development and debugging for printing content to the debugger is:",
-        choices: [
+        answers: [
             "1. JavaScript",
             "2. terminal/bash",
             "3. for loops",
-            "4. console.log"],
-        answer: 4,
+            "4. console.log"], // this is the correct answer
     },
 ]
 
@@ -56,15 +52,15 @@ function renderQuestion() {
     questionTitleEl.innerHTML = questionList[index].question
 }
 
-// array to list each question as an object
+// function to generate questions
 function generateQuestions() {
     // for loop to cycle through questions 
-    questionTitleEl.textContent = questionList[1].question
+    questionTitleEl.textContent = questionList[0].question
     for (var i = 0; i < questionList.length; i++) {
         var answerOptions = document.createElement("button")
         answerOptions.textContent = questionList.answer;
         answerOptions.setAttribute("value", questionList[i]);
-        answerEl.appendChild(answerEl);
+        answerEl.appendChild(answerOptions);
     }
     // string for questions and answers
     if (index < 4) {
@@ -78,10 +74,12 @@ function generateQuestions() {
 
 // function to render answer choices
 function renderAnswers() {
-    answerEl.innerHTML = questionList[index].choices
+    answerEl.innerHTML = questionList[index].answers
+    console.log();
 }
 // function to generate answer choices 
 function generateAnswers() {
+
     if (index < 4) {
         renderAnswers();
     }
@@ -90,6 +88,12 @@ function generateAnswers() {
         console.log("Alert!");
     }
 }
+
+// // function to start the quiz
+// var startQuiz = function() {
+//     renderQuestion();
+//     renderAnswers);
+// }
 
 // Click to start quiz and display first question
 startEl.addEventListener('click', generateQuestions)
@@ -114,6 +118,10 @@ startEl.addEventListener('click', () => {
         }
     }, 1000);
 });
+
+// on click to start quiz prompt user to input initials for high score
+
+// function to start quiz and another one to end quiz?
 
 // tell user if answer is correct or wrong, time penalties when questions are answered wrong/false
 
