@@ -12,22 +12,25 @@
     <header>
         <h1>Coding Quiz</h1>
         <button id="high-scores">View High Scores</button>
-        <h2 id="timer">Timer</h2>
+        <h2>Timer:</h2>
+        <h2 id="timer"></h2>
     </header>
     <!-- section for questions -->
     <section id="quiz">
         <!--information about the quiz -->
-        <h3> Welcome to the Coding Quiz! You have ten minutes to answer the questions. The quiz begins when you click the button to start. Good luck!</h3>
+        <h3> Welcome to the Coding Quiz! You have ten minutes to answer the questions. The quiz timer begins when you click the button to start. Be aware that incorrect answers will penaize your score/time by ten seconds. Good luck!</h3>
         <!-- button to start quiz-->
         <button id="start-button">Click here to start the quiz!</button>
         <!-- question information  -->
-        <h2 id="quiz-question"></h2>
+        <div>
+            <h2 id="quiz-question"></h2>
+        </div>
         <!-- mulitple choice answer buttons -->
         <div>
-            <button class="answer">Yes</button>
-            <button class="answer">No</button>
-            <button class="answer">Maybe</button>
-            <button class="answer">I don't know</button>
+            <button class="answer"></button>
+            <button class="answer"></button>
+            <button class="answer"></button>
+            <button class="answer"></button>
         </div>
     </section>
     <script src="./assets/js/script.js"></script>
