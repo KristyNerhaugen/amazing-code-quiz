@@ -24,21 +24,46 @@ body {
 
 h3 {
     font-size: 32px;
-}
-/* style for all buttons */
-button {
-    background-color: gray;
-    color: black;
-    font-size: 30px;
+    padding: 20px;
 }
 
 /* style for start-button */
 
 #start-button {
-    background-color: darkblue;
-    color: white;
+    padding 10px 10px;
+    font-size: 40px;
+    background-color: lightgrey;
+    color: blueviolet;
 }
 
 #score-screen {
     display: none;
+}
+
+/* style for questions and answers on quiz html */ 
+.choice-container {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: solid blue;
+    background-color: whitesmoke;
+}
+
+.choice-prefix {
+    padding: 10px 5px;
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.choice-text {
+    padding: 10px;
+    color: darkblue;
+}
+
+#quiz-question {
+    padding: 20px;
+    font-size: 24px;
+    color: darkblue;
 }
