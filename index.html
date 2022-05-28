@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -12,7 +14,7 @@
     <header>
         <h1>Coding Quiz</h1>
         <!-- create html page for the high scores below to link to  -->
-        <h2 id="high-scores">View High Scores</h2>
+        <a class="btn" id="high-scores" href="/highscores.html">View High Scores<a>
         <h2>Timer:</h2>
         <h2 id="timer"></h2>
     </header>
@@ -20,8 +22,8 @@
     <section id="quiz">
         <!--information about the quiz -->
         <h3> Welcome to the Coding Quiz! You have ten minutes to answer the questions. The quiz timer begins when you click the button to start. Be aware that incorrect answers will penaize your score/time by ten seconds. Good luck!</h3>
-        <!-- button to start quiz-->
-        <button id="start-button">Click here to start the quiz!</button>
+        <!-- button to start quiz and link to quiz page-->
+        <a class="btn" id="start-button" href="/game.html">Click here to start the quiz!</a>
         <!-- question information  -->
         <div>
             <h2 id="quiz-question"></h2>

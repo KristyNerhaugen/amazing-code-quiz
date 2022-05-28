@@ -43,54 +43,27 @@ var questionList = [
     },
 ]
 
-// function to render questions
-let index = questionList.length;
-function renderQuestion() {
-    questionTitleEl.innerHTML = questionList[index].question
-}
-
+let questionNumber = 0;
 // function to generate questions
 function generateQuestions() {
     // for loop to cycle through questions 
-    questionTitleEl.textContent = questionList[0].question
-    for (var i = index; i < questionList.length; i++) {
-        var answerOptions = document.createElement("button")
-        answerOptions.textContent = questionList.answer;
-        answerOptions.setAttribute("value", questionList[i]);
-        answerEl.appendChild(answerOptions);
-    }
-    // string for questions and answers
-    if (index < 4) {
-        renderQuestion();
-    }
-
-    else {
-        console.log("Alert!");
-    }
-}
-
-// function to render answer choices
-function renderAnswers() {
-    answerEl.innerHTML = questionList[index].answers
-}
-// function to generate answer choices 
-function generateAnswers() {
-    // // for loop to cycle answers 
-    // answerEl.textContent = questionList[0].answers
-    // for (var i = index; i < questionList.length; i++) {
+    questionTitleEl.textContent = questionList[questionNumber].question
+    // for (var i = 0; i < questionList.length; i++) {
     //     var answerOptions = document.createElement("button")
     //     answerOptions.textContent = questionList.answer;
     //     answerOptions.setAttribute("value", questionList[i]);
     //     answerEl.appendChild(answerOptions);
     // }
-    if (index < 4) {
-        renderAnswers();
-    }
+    // // string for questions and answers
+    // if (index < 4) {
+    //     renderQuestion();
+    // }
 
-    else {
-        console.log("Alert!");
-    }
+    // else {
+    //     console.log("Alert!");
+    // }
 }
+
 
 // // function to start the quiz
 // var startQuiz = function() {
@@ -98,19 +71,13 @@ function generateAnswers() {
 //     renderAnswers);
 // }
 
-// Click to start quiz and display first question
-startEl.addEventListener('click', generateQuestions)
-// click to start quiz and display first question answers 
-startEl.addEventListener('click', generateAnswers)
-// click to have start quiz button hide 
-startEl.addEventListener('click', () => {
-    startEl.style.display = 'none';
-});
+
+
 
 // function to start timer when quiz starts: moved the time into the event listener to get the timer to start only when the start quiz button begins
 startEl.addEventListener('click', () => {
     var now = 600;
-
+    startEl.style.display = 'none';
     var x = setInterval(function () {
 
         CountDownTimer.innerHTML = now;
@@ -120,6 +87,7 @@ startEl.addEventListener('click', () => {
             clearInterval(x);
         }
     }, 1000);
+generateQuestions();
 });
 
 // on click to start quiz prompt user to input initials for high score
