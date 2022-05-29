@@ -61,14 +61,16 @@ function getNewQuestion() {
 
     // if statement if the number of questions left in the array is zero, take user to the high score page
     if (availableQuestions.length === 0) {
-        return window.location.assign("/end.html");
+        // save scores
+        localStorage.setItem('mostRecentScore', score);
+        return window.location.assign("./highscore.html");
     }
 
     questionCounter++;
     // generate a random question by using Math random
     var questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    // display the generated quesiton using innerText
+    // display the generated question using innerText
     question.innerText = currentQuestion.question;
 
     // generate answers that correspond to the displayed question
@@ -99,23 +101,23 @@ choices.forEach(choice => {
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
         }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
         // call increment score if the correct answer is selected in order to give points for correct score
         if (classToApply === 'correct') {
             incrementScore(correct_points);
         }
-        // // apply the selected class to the selected answer, using parentElement to get the entire container
-        // selectedChoice.parentElement.classList.add(classToApply);
-
         // call function to have new question generate once current question is answered
         getNewQuestion();
     });
 })
 
 // function to keep track of score, setting the var of num for the score number 
-// learned that I can simplift var num = function incrementScore() by using the short hand of =>
+// learned that I can simplift function incrementScore() by using the short hand of =>
 
 incrementScore = num => {
-    score +- num;
+    score += num;
     scoreText.innerText = score;
     console.log(num);
 }
