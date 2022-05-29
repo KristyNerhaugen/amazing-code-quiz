@@ -122,5 +122,18 @@ incrementScore = num => {
     console.log(num);
 }
 
-// call startQuiz function
+// timer to start when page loads, this code is from https://www.codegrepper.com/code-examples/javascript/how+to+add+timer+to+quiz+in+javascript
+var sec = 300;
+var time = setInterval(myTimer, 1000);
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec + "sec left";
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("Time out!! :(");
+    }
+}
+
+// call startQuiz function to begin quiz questions 
 startQuiz();
